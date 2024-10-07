@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f5f7;
+        }
+        header {
+            background-color: #FF4B2B;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #2C3E50;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: background 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #1A242F;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        .profile {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .logout-button {
+            background-color: #FF4B2B;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .logout-button:hover {
+            background-color: #FF416C;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Your Dashboard</h1>
+</header>
+
+<div class="sidebar">
+    <a href="#">Profile</a>
+    <a href="#">Settings</a>
+    <a href="#">Feedback</a>
+    <a href="#">Help</a>
+    <a href="#" id="logout">Logout</a>
+</div>
+
+<div class="content">
+    <div class="profile">
+        <h2>Your Profile</h2>
+        <p><strong>Name:</strong> nikam sujal</p>
+        <p><strong>Email:</strong> omkar108ok@gmail.com</p>
+    </div>
+
+    <div class="usage-info">
+        <h2>Usage Information</h2>
+        <p>Here you can manage your account settings, view your feedback history, and access help.</p>
+    </div>
+</div>
+
+<footer>
+    <p>Created by Team KLU</p>
+</footer>
+
+<script>
+    document.getElementById('logout').addEventListener('click', () => {
+        // Perform logout logic here
+        alert('You have been logged out. Redirecting to login page...');
+        window.location.href = 'index.html'; // Change this to your login page URL
+    });
+</script>
+
+</body>
+</html>
